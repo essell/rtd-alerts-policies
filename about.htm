@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTD Bus Arrival Alerts — a personal project</title>
+<style>
+  :root {
+    --ink: #1a1e23;
+    --paper: #f6f5f1;
+    --rule: #d8d5cc;
+    --transit-blue: #1e4d8c;
+    --transit-yellow: #e8a33d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  .stopsign {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--transit-blue);
+    border: 2px solid var(--transit-blue);
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .subhead {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #5a5f66;
+    font-size: 16px;
+    margin: 0 0 40px;
+  }
+  p { font-size: 18px; max-width: 62ch; }
+  .route-line {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 36px 0;
+    padding: 18px 20px;
+    background: white;
+    border-left: 4px solid var(--transit-yellow);
+  }
+  .route-num {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--transit-blue);
+    min-width: 34px;
+  }
+  .route-line div p { margin: 0; font-size: 16px; color: #3a3e44; }
+  h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    margin: 48px 0 12px;
+    color: var(--ink);
+  }
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 56px 0; }
+  .fineprint {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: #6b6f75;
+  }
+  .fineprint p { font-size: 14px; }
+  code {
+    background: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="stopsign">NEXT STOP</div>
+
+  <h1>RTD Bus Arrival Alerts</h1>
+  <p class="subhead">A small personal project, not a company or public service.</p>
+
+  <p>
+    This project checks real-time bus arrival data from RTD Denver's public
+    transit feed and sends a short text message to a couple of phones in my
+    own household — mainly so my kid can glance at their phone and know
+    exactly when to walk out the door.
+  </p>
+
+  <div class="route-line">
+    <span class="route-num">21</span>
+    <div><p>Evans &amp; High St — eastbound and westbound</p></div>
+  </div>
+  <div class="route-line">
+    <span class="route-num">12</span>
+    <div><p>Pearl &amp; Iowa — southbound</p></div>
+  </div>
+
+  <h2>Who runs this</h2>
+  <p>
+    It's operated by one person (me), for personal, non-commercial use.
+    There's no company, no sign-up page, and no public list of recipients —
+    I add phone numbers myself, one at a time, for people I know directly.
+  </p>
+
+  <h2>What the messages contain</h2>
+  <p>
+    Just transit arrival times and the cross streets of the stop, nothing
+    else. No marketing, no third-party content, no data collection beyond
+    the phone numbers needed to deliver the text.
+  </p>
+
+  <h2>Opting out</h2>
+  <p>
+    Reply <code>STOP</code> to any message to stop receiving alerts, or
+    <code>HELP</code> for assistance.
+  </p>
+
+  <hr class="rule">
+
+  <div class="fineprint">
+    <p>
+      This page exists mainly to describe the project for messaging-provider
+      verification purposes. If you have questions about it, you can reach
+      the operator directly.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
